@@ -1,14 +1,24 @@
 ## 🌌 Cosmic Data Lab — Astronomical Image Processing & Star Detection
 
-This project explores astronomical data analysis using Python, focusing on:
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue" />
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange" />
+  <img src="https://img.shields.io/badge/Astronomy-FITS%20Data-purple" />
+  <img src="https://img.shields.io/badge/Photutils-Star%20Detection-yellow" />
+  <img src="https://img.shields.io/badge/License-MIT-green" />
+  <img src="https://img.shields.io/github/stars/Palak2111am/Cosmic-Data-Lab?style=social" />
+</p>
 
-* ✅ Loading & visualizing FITS images
-* ✅ Noise smoothing & contrast scaling (ZScale)
-* ✅ Detecting stars using DAOStarFinder (photutils)
-* ✅ Plotting detected sources on astronomical images
-* ✅ Pixel intensity statistics & histogram analysis
+This project demonstrates the fundamentals of **astronomical data analysis using Python**, including:
 
-The goal is to build practical experience in **astronomical data science & observational astronomy techniques**, similar to workflows used in research pipelines for telescopic images.
+✅ Loading & visualizing FITS files
+✅ ZScale contrast stretching like real telescopes
+✅ Gaussian smoothing for noise reduction
+✅ Star detection via DAOStarFinder (Photutils)
+✅ Pixel statistics & histogram analysis
+✅ Research-style astrophotography processing pipeline
+
+Goal: build strong foundations in **observational astronomy + Python scientific computing** for future deep space ML projects.
 
 ---
 
@@ -16,64 +26,57 @@ The goal is to build practical experience in **astronomical data science & obser
 
 ```
 Cosmic-Data-Lab/
-│
-├── Cosmic_Data_Lab_FITS.ipynb     # Main notebook — FITS processing & star detection
-├── HorseHead.fits                 # Sample FITS file (Horsehead Nebula)
+│── Cosmic_Data_Lab_FITS.ipynb     # Main notebook — FITS processing & star detection
+│── HorseHead.fits                 # Sample dataset — Horsehead Nebula
+│── requirements.txt               # Python dependencies
 └── README.md
 ```
 
-> Future additions will include: `.fits` data directory, photometry scripts, and ML galaxy classification.
+> Future planned structure:
+
+```
+data/    notebooks/   images/   results/   src/
+```
 
 ---
 
 ## 🔭 Features
 
-| Feature            | Description                              |
-| ------------------ | ---------------------------------------- |
-| FITS handling      | Load and inspect space-telescope images  |
-| Z-Scale Stretch    | True astronomical intensity scaling      |
-| Gaussian smoothing | Reduce noise for faint object detection  |
-| Star detection     | `DAOStarFinder` from Photutils           |
-| Astrometry plots   | Overlay detected star positions          |
-| Data stats         | Min/max/mean/std histogram with log axis |
+| Feature               | Description                               |
+| --------------------- | ----------------------------------------- |
+| FITS handling         | Telescope-style data loading & inspection |
+| ZScale Stretch        | Observatory-standard contrast scaling     |
+| Gaussian smoothing    | Noise suppression for faint sources       |
+| DAOStarFinder         | Classical photometric star detection      |
+| Overlay visualization | Stars marked on smoothed image            |
+| Pixel histogram       | CCD-style pixel distribution (log scale)  |
 
 ---
 
-## 🛰️ Sample Results
+## 📸 Example Results
 
-* Pixel statistics printed for FITS image
-* Log-scaled pixel histogram
-* Detected stars highlighted on smoothed image
-* Detection count example:
+* Histogram of pixel intensities (log scale)
+* Smoothed frame + detected stars highlighted
+* Detection result: **~82 stars in the Horsehead Nebula frame**
 
-  ```
-  ✅ Detected ~82 stars in Horsehead Nebula frame
-  ```
-
-> *(Image outputs visible inside the notebook)*
+> Plots available inside the notebook
 
 ---
 
 ## 🛠️ Installation
 
-### ✅ 1. Create a Virtual Environment (recommended)
+### 1️⃣ Create python environment
 
 ```bash
 python -m venv astroenv
-source astroenv/bin/activate   # Mac/Linux
 astroenv\Scripts\activate      # Windows
+source astroenv/bin/activate   # Mac/Linux
 ```
 
-### ✅ 2. Install Dependencies
+### 2️⃣ Install required libraries
 
 ```bash
 pip install -r requirements.txt
-```
-
-Or manually:
-
-```bash
-pip install astropy photutils numpy scipy matplotlib
 ```
 
 ---
@@ -92,20 +95,60 @@ Cosmic_Data_Lab_FITS.ipynb
 
 ---
 
-## 📦 Data Source
+## 📚 Library Purpose
 
-* **Horsehead Nebula FITS Image** — downloaded from Astropy tutorial archive
-  *(Public astrophysics education dataset)*
+| Library       | Purpose                         |
+| ------------- | ------------------------------- |
+| Astropy       | FITS, astronomy utilities, WCS  |
+| Photutils     | Star detection & photometry     |
+| NumPy / SciPy | Numerical processing            |
+| Matplotlib    | Data visualization              |
+| Jupyter       | Interactive scientific workflow |
 
 ---
 
-## 🎯 Future Roadmap
+## 🌌 Astrophysics Theory Background
 
-* 🌠 Add more telescope FITS images (HST, SDSS)
-* ⭐ Aperture photometry & magnitude estimation
-* 🧠 Machine learning — galaxy/star classification
-* 📂 `/notebooks`, `/data`, `results/` folders
-* 🌌 Integrate Astropy WCS (coordinate system)
+This notebook uses standard astronomy methods:
+
+### Image Science Concepts
+
+* FITS Format — **NASA/ESO astronomical data standard**
+* Z-scale stretch — telescope image scaling technique
+* Gaussian smoothing — denoising faint signals
+* DAOStarFinder — **Stetson (1987)** stellar photometry algorithm
+
+### Key References
+
+**Primary Papers & Books**
+
+* Stetson, P. — *DAOPHOT: Stellar Photometry Program* (1987)
+* Berry & Burnell — *Astronomical Image Processing*
+* Carroll & Ostlie — *Modern Astrophysics*
+* Howell — *Handbook of CCD Astronomy*
+* Bevington & Robinson — *Data Reduction & Error Analysis*
+
+**Official Docs**
+
+* Astropy — [https://docs.astropy.org](https://docs.astropy.org)
+* Photutils — [https://photutils.readthedocs.io](https://photutils.readthedocs.io)
+* NASA HEASARC FITS Guide — [https://heasarc.gsfc.nasa.gov/docs/fcg/](https://heasarc.gsfc.nasa.gov/docs/fcg/)
+
+---
+
+## 🎯 Roadmap
+
+🚀 Short-term
+
+* Aperture photometry & magnitude measurements
+* Add output images in `/images` folder
+* Add `/data` & `/notebooks` directory structure
+
+🧠 Long-term
+
+* ML pipeline for galaxy/star classification
+* Integrate SDSS / HST data
+* WCS Calibration (Sky coordinates, RA/DEC)
 
 ---
 
@@ -113,23 +156,23 @@ Cosmic_Data_Lab_FITS.ipynb
 
 **Palak Patel**
 Aspiring Astrophysicist & Data Scientist
-Focus: *Astronomy x Machine Learning x Python*
+Research Interests: *Astronomy × Python × ML × Scientific Computing*
 
 ---
 
 ## 📄 License
 
-This project is open-source for learning & research use.
+MIT License — free for learning and research.
 
 ---
 
-## 🤝 Contributions
+## 🤝 Contributing
 
-Pull requests & suggestions are welcome!
-If you'd like to collaborate on astronomy ML, spectroscopy, exoplanets, or gravitational-wave data — let’s connect 🚀
+Pull requests welcome!
+If you'd like to collaborate on astronomy ML, exoplanets, gravitational waves, or telescope data — I'm happy to connect 🚀
 
 ---
 
-### ⭐ If you found this useful, star the repo!
+### ⭐ If you like this project, please star the repo!
 
 
