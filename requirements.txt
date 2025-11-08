@@ -1,0 +1,13 @@
+# Core scientific libraries
+numpy
+scipy
+matplotlib
+
+# FITS handling & astronomy tools
+astropy
+
+# Source detection & photometry
+photutils
+
+# Notebook & plotting utilities
+jupyter

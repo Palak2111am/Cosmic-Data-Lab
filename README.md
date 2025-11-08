@@ -1,35 +1,135 @@
-# Cosmic-Data-Lab
-Astronomical Data Analysis and Visualization: 
-<br>
-# 🌌 Astronomical Data Analysis and Visualization
+## 🌌 Cosmic Data Lab — Astronomical Image Processing & Star Detection
 
-This project explores the processing and analysis of astronomical images using Python. It focuses on visualizing FITS-format telescope data, applying noise reduction, and detecting stellar sources.
+This project explores astronomical data analysis using Python, focusing on:
 
-## 🧪 Features
-- Load and view astronomical FITS images
-- Apply Gaussian smoothing for noise reduction
-- Detect stars using DAOStarFinder (from photutils)
-- Plot and annotate detected sources
+* ✅ Loading & visualizing FITS images
+* ✅ Noise smoothing & contrast scaling (ZScale)
+* ✅ Detecting stars using DAOStarFinder (photutils)
+* ✅ Plotting detected sources on astronomical images
+* ✅ Pixel intensity statistics & histogram analysis
 
-## 📁 Dataset
-Sample FITS image used: Horsehead Nebula (via Astropy tutorial archive)
+The goal is to build practical experience in **astronomical data science & observational astronomy techniques**, similar to workflows used in research pipelines for telescopic images.
 
-## 🛠️ Tools
-- Astropy
-- Photutils
-- Matplotlib
-- NumPy
-- SciPy
+---
 
-## 🚀 How to Run
-Open the notebook locally or launch in Colab:
+## 📂 Project Structure
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://gist.github.com/navendu-p/1f86685b535a5e96ea6d886c6588f8f4)
+```
+Cosmic-Data-Lab/
+│
+├── Cosmic_Data_Lab_FITS.ipynb     # Main notebook — FITS processing & star detection
+├── HorseHead.fits                 # Sample FITS file (Horsehead Nebula)
+└── README.md
+```
 
-## 📌 Output
-Detects and highlights stars in a telescope image using classic image processing + astronomy-specific methods.
+> Future additions will include: `.fits` data directory, photometry scripts, and ML galaxy classification.
 
-## 📚 Credits
-Inspired by Astropy tutorials and adapted for the Cosmic Data Lab initiative by Palak Patel.
+---
+
+## 🔭 Features
+
+| Feature            | Description                              |
+| ------------------ | ---------------------------------------- |
+| FITS handling      | Load and inspect space-telescope images  |
+| Z-Scale Stretch    | True astronomical intensity scaling      |
+| Gaussian smoothing | Reduce noise for faint object detection  |
+| Star detection     | `DAOStarFinder` from Photutils           |
+| Astrometry plots   | Overlay detected star positions          |
+| Data stats         | Min/max/mean/std histogram with log axis |
+
+---
+
+## 🛰️ Sample Results
+
+* Pixel statistics printed for FITS image
+* Log-scaled pixel histogram
+* Detected stars highlighted on smoothed image
+* Detection count example:
+
+  ```
+  ✅ Detected ~82 stars in Horsehead Nebula frame
+  ```
+
+> *(Image outputs visible inside the notebook)*
+
+---
+
+## 🛠️ Installation
+
+### ✅ 1. Create a Virtual Environment (recommended)
+
+```bash
+python -m venv astroenv
+source astroenv/bin/activate   # Mac/Linux
+astroenv\Scripts\activate      # Windows
+```
+
+### ✅ 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Or manually:
+
+```bash
+pip install astropy photutils numpy scipy matplotlib
+```
+
+---
+
+## ▶️ Run the Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```
+Cosmic_Data_Lab_FITS.ipynb
+```
+
+---
+
+## 📦 Data Source
+
+* **Horsehead Nebula FITS Image** — downloaded from Astropy tutorial archive
+  *(Public astrophysics education dataset)*
+
+---
+
+## 🎯 Future Roadmap
+
+* 🌠 Add more telescope FITS images (HST, SDSS)
+* ⭐ Aperture photometry & magnitude estimation
+* 🧠 Machine learning — galaxy/star classification
+* 📂 `/notebooks`, `/data`, `results/` folders
+* 🌌 Integrate Astropy WCS (coordinate system)
+
+---
+
+## 👩‍🚀 Author
+
+**Palak Patel**
+Aspiring Astrophysicist & Data Scientist
+Focus: *Astronomy x Machine Learning x Python*
+
+---
+
+## 📄 License
+
+This project is open-source for learning & research use.
+
+---
+
+## 🤝 Contributions
+
+Pull requests & suggestions are welcome!
+If you'd like to collaborate on astronomy ML, spectroscopy, exoplanets, or gravitational-wave data — let’s connect 🚀
+
+---
+
+### ⭐ If you found this useful, star the repo!
 
 
